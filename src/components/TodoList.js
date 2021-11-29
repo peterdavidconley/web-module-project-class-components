@@ -5,7 +5,8 @@ const TodoList = props => {
 
         return(
             <div>
-                <h3>Testing</h3>
+                {props.todos.map( todo => 
+                (<h3>Testing TodoList</h3>))}
             </div>
         )
 }
