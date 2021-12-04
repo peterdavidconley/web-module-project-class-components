@@ -51,6 +51,25 @@ handleClear = () => {
 
 }
 
+handleToggleTask = () => {
+  console.log(todos)
+
+  this.setState({
+    ...this.state,
+    todos: this.state.todos.map( todo => {
+      if(todo.id === task.id) {
+              return {...todo, purchased: todo.completed? false: true}
+            } else { return todo }
+    })
+  })
+
+}
+
+//   groceries: this.state.groceries.map( g => {
+  //     if(g.id === item.id) {
+  //       return {...g, purchased: g.purchased? false: true}
+  //     } else { return g }
+
   render() {
     return (
       <div>
@@ -58,7 +77,7 @@ handleClear = () => {
         <h2>Welcome to your Todo App!</h2>
         <TodoForm handleAddTask={this.handleAddTask}/>
         </div>
-        <TodoList todos={this.state.todos}/>
+        <TodoList todos={this.state.todos} handleToggleTask={this.handleToggleTask}/>
         <button onClick={this.handleClear}>Clear List</button>
       </div>
     );
