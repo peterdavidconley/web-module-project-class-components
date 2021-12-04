@@ -41,6 +41,16 @@ handleAddTask = (task) => {
   })
 }
 
+handleClear = () => {
+  this.setState({
+    ...this.state,
+    todos: this.state.todos.filter( task => {
+      return (task.completed === false)
+    })
+  })
+
+}
+
   render() {
     return (
       <div>
@@ -49,7 +59,7 @@ handleAddTask = (task) => {
         <TodoForm handleAddTask={this.handleAddTask}/>
         </div>
         <TodoList todos={this.state.todos}/>
-        <button>Clear List</button>
+        <button onClick={this.handleClear}>Clear List</button>
       </div>
     );
   }
