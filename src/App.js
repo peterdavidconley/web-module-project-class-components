@@ -45,7 +45,7 @@ handleClear = () => {
   this.setState({
     ...this.state,
     todos: this.state.todos.filter( task => {
-      return (task.completed === false)
+      return (task.completed === true)
     })
   })
 
