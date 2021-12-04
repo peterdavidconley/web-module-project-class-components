@@ -1,4 +1,5 @@
 import React from 'react'
+import '../style.css'
 
 const Todo = props => {
 
@@ -7,7 +8,7 @@ const Todo = props => {
     }
     
         return(
-            <div onClick={handleClick} className={props.todo.completed ? ' completed' : ''}>
+            <div key={props.todo.id} onClick={handleClick} className={props.todo.completed ? ' completed' : ''}>
                 <p>{props.todo}</p>
             </div>
         )
@@ -15,3 +16,5 @@ const Todo = props => {
 } 
 
 export default Todo
+
+//props.todo.id = key

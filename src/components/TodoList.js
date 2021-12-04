@@ -18,4 +18,3 @@ const TodoList = props => {
 
 export default TodoList
 
-// <Todo todo={todo.task} key={todo.id}/>
