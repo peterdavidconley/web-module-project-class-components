@@ -51,7 +51,7 @@ handleClear = () => {
 
 }
 
-handleToggleTask = () => {
+handleToggleTask = (task) => {
   console.log(todos)
 
   this.setState({
@@ -64,11 +64,6 @@ handleToggleTask = () => {
   })
 
 }
-
-//   groceries: this.state.groceries.map( g => {
-  //     if(g.id === item.id) {
-  //       return {...g, purchased: g.purchased? false: true}
-  //     } else { return g }
 
   render() {
     return (

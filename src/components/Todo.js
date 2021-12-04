@@ -2,8 +2,8 @@ import React from 'react'
 
 const Todo = props => {
 
-    handleClick = () => {
-        props.handleToggleTask(props.todo.task)
+   const handleClick = () => {
+        props.handleToggleTask(props.todo)
     }
     
         return(
