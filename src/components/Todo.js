@@ -4,12 +4,12 @@ import '../style.css'
 const Todo = props => {
 
    const handleClick = () => {
-        props.handleToggleTask(props.todo)
+        props.handleToggleTask(props.todo.id)
     }
     
         return(
-            <div key={props.todo.id} onClick={handleClick} className={props.todo.completed ? ' completed' : ''}>
-                <p>{props.todo}</p>
+            <div key={props.todo.id} onClick={handleClick} className={props.todo.completed ? 'completed' : ''}>
+                <p>{props.todo.task}</p>
             </div>
         )
     

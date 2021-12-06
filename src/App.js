@@ -45,20 +45,20 @@ handleClear = () => {
   this.setState({
     ...this.state,
     todos: this.state.todos.filter( task => {
-      return (task.completed === true)
+      return (task.completed === false)
     })
   })
 
 }
 
-handleToggleTask = (task) => {
+handleToggleTask = (id) => {
   console.log(this.state.todos)
 
   this.setState({
-    ...this.state,
+ 
     todos: this.state.todos.map( todo => {
-      if(todo.id === task.id) {
-              return {...todo, purchased: todo.completed? false: true}
+      if(todo.id === id) {
+              return {...todo, completed: !todo.completed}
             } else { return todo }
     })
   })
